@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Speed Typing Game</title>
+</head>
+<body>
+    <header><h1>Speed Typing Game</h1></header>
+    <section class="game">
+        <input type="text" id="text-input"></input>
+        <label id="text-displayer" for="text-input" ><p id="target-text">Press start</p></label>
+        
+        <div class="texts-choices">
+            <h3>Length choices</h3>
+            <select name="choices" id="length-choices">
+                <option value="short">short</option>
+                <option value="long">long</option>
+            </select>
+<!--             creates a drop-down menu (<select> element) that allows the user to choose  -->
+<!--              <option> element represents an individual option in the drop-down list. -->
+        </div>
+        
+        <label id="start-btn" for="text-input" onclick="start()">Start</label>
+        <p class="timer-displayer">TIMER <span id="timer"></span> </p>
+        
+        <div class="stats-area">
+            <p class="stats">WPM: <span id="wpm-count"></span></p>
+            <p class="stats">Acurrancy: <span id="accurancy-count"></span></p>
+            <p class="stats">Score: <span id="points-count"></span></p>
+        </div>
+        
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
