@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <title>Speed Typing Game</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Speed Typing Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header><h1>Speed Typing Game</h1></header>
-    <section class="game">
-        <input type="text" id="text-input"></input>
-        <label id="text-displayer" for="text-input" ><p id="target-text">Press start</p></label>
-        
-        <div class="texts-choices">
-            <h3>Length choices</h3>
-            <select name="choices" id="length-choices">
-                <option value="short">short</option>
-                <option value="long">long</option>
-            </select>
-<!--             creates a drop-down menu (<select> element) that allows the user to choose  -->
-<!--              <option> element represents an individual option in the drop-down list. -->
-        </div>
-        
-        <label id="start-btn" for="text-input" onclick="start()">Start</label>
-        <p class="timer-displayer">TIMER <span id="timer"></span> </p>
-        
-        <div class="stats-area">
-            <p class="stats">WPM: <span id="wpm-count"></span></p>
-            <p class="stats">Acurrancy: <span id="accurancy-count"></span></p>
-            <p class="stats">Score: <span id="points-count"></span></p>
-        </div>
-        
+  <header>
+    <h1>&#128295; Speed Typing Game</h1> <!-- ⚙ -->
+    <nav>
+      <span>&#127968; Home</span> <!-- 🏠 -->
+      <span>&#10067; Instructions</span> <!-- ❓ -->
+      <span>&#128100; Profile</span> <!-- 👤 -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="game-intro">
+      <h2>&#128161; Instructions</h2> <!-- 💡 -->
+      <p>Type the words shown as fast and accurately as possible. You gain 1 point per correct word!</p>
+      <p>Select a difficulty level to begin.</p>
     </section>
-    <script src="index.js"></script>
+
+    <div class="level-select">
+      <button class="level-btn" data-time="5">&#128171; Easy</button> <!-- 🐇 -->
+      <button class="level-btn" data-time="3">&#9201; Medium</button> <!-- ⏱ -->
+      <button class="level-btn" data-time="2">&#9888; Hard</button> <!-- ⚠ -->
+    </div>
+
+    <div class="game-box">
+      <p id="word-display">Click a level to start!</p>
+      <input type="text" id="word-input" placeholder="Start typing..." disabled />
+      
+      <div class="info">
+        <p>&#9200; Time Left: <span id="time">0</span>s</p> <!-- ⏰ -->
+        <p>&#127942; Score: <span id="score">0</span></p>   <!-- 🏆 -->
+      </div>
+
+      <progress id="progress" value="0" max="100"></progress>
+      <button id="restart-btn">&#10227; Restart</button> <!-- ↻ -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Speed Typing Game | Designed with &#10084; by OpenAI</p> <!-- ❤ -->
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
